@@ -1,0 +1,9 @@
+[submodule "aries"]
+	path = aries
+	url = https://github.com/hyperledger/aries-cloudagent-python.git
+[submodule "tails"]
+	path = tails
+	url = https://github.com/bcgov/indy-tails-server.git
+[submodule "von"]
+	path = von
+	url = https://github.com/bcgov/von-network.git
