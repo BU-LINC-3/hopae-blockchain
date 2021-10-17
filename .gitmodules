@@ -1,9 +1,12 @@
 [submodule "aries"]
 	path = aries
 	url = https://github.com/hyperledger/aries-cloudagent-python.git
+	branch = aa9a5c9967483d70419a0404a840713d6fa058dc
 [submodule "tails"]
 	path = tails
 	url = https://github.com/bcgov/indy-tails-server.git
+	branch = 0a504e73b47b048042601e390e158beea803938e
 [submodule "von"]
 	path = von
 	url = https://github.com/bcgov/von-network.git
+	branch = 9833382e8c60fa0b54c8ab2d9119e49ff02f7d00
