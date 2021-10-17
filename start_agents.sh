@@ -1,6 +1,6 @@
 #!/bin/bash
 export PATH=$PATH:~/.local/bin
-export ARIES_PATH=/opt/team3/aries
+export ARIES_PATH=./aries
 export HOST_IP=$(docker run --rm --net=host eclipse/che-ip)
 
 docker build -q -t faber-alice-demo -f $ARIES_PATH/docker/Dockerfile.demo $ARIES_PATH
