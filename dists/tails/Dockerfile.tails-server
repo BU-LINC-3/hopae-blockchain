@@ -1,0 +1,22 @@
+FROM bcgovimages/von-image:next-1
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Seoul
+
+USER root
+RUN apt-get update && apt-get install -y tzdata
+
+USER indy
+ADD requirements.txt .
+ADD requirements.dev.txt .
+
+RUN pip3 install --no-cache-dir -r requirements.txt -r requirements.dev.txt
+
+ADD tails_server ./tails_server
+ADD bin ./bin
+ADD README.md ./
+ADD setup.py ./
+
+RUN pip3 install --no-cache-dir -e .
+
+ENTRYPOINT ["/bin/bash", "-c", "tails-server \"$@\""]
+
